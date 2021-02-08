@@ -302,6 +302,21 @@ my $build = Module::Build->new(
         "Module::Signature"	=> 0,
     },
     add_to_cleanup	=> [ "t/Config.pm", "TAGS" ],
+
+    meta_merge  => {
+        "meta-spec" => { version => 2 },
+        resources   => {
+            homepage    => "https://metacpan.org/release/DbFramework",
+            repository  => {
+                type    => "git",
+                url     => "git://github.com/imacat/DbFramework.git",
+                web     => "https://github.com/imacat/DbFramework",
+            },
+            bugtracker  => {
+                "web"   => "https://github.com/imacat/DbFramework/issues"
+            }
+        },
+    },
 );
 
 $build->create_build_script;

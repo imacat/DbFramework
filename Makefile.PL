@@ -284,19 +284,12 @@ CREATE TABLE c_table (
 	 }
 }
 
-# LICENSE is only availabe since ExtUtils::MakeMaker 6.30_01
-use vars qw(%license $eummver);
-%license = qw();
-$eummver = $ExtUtils::MakeMaker::VERSION;
-$eummver =~ s/_//;
-%license = (LICENSE => "perl") if $eummver > 6.30;
-
 WriteMakefile(
     NAME		=> "DbFramework",
     VERSION		=> "1.12",
     ABSTRACT		=> "Classes for Manipulating DBI Databases, Based on the CDIF Data Model Subject Area",
     AUTHOR		=> "imacat <imacat\@mail.imacat.idv.tw>",
-    %license,
+	LICENSE 	=> "perl",
     PREREQ_PM		=> {
         "Alias"			=> 0,
         "DBI"			=> 1.06,
@@ -314,5 +307,20 @@ WriteMakefile(
     },
     clean		=> {
         FILES		=> "t/Config.pm TAGS",
+    },
+
+    META_MERGE  => {
+        "meta-spec" => { version => 2 },
+        resources   => {
+            homepage    => "https://metacpan.org/release/DbFramework",
+            repository  => {
+                type    => "git",
+                url     => "git://github.com/imacat/DbFramework.git",
+                web     => "https://github.com/imacat/DbFramework",
+            },
+            bugtracker  => {
+                "web"   => "https://github.com/imacat/DbFramework/issues"
+            }
+        },
     },
 );
