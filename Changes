@@ -5,6 +5,9 @@ DbFramework change log
 	 2. MANIFEST.SKIP: Added.
 	 3. Makefile, MANIFEST, META.yml, SIGNATURE, t/Config.pm: Removed
 	    the generated files.
+	 4. COPYING: Removed the redundant and irrelevant GPL license copy.
+	 5. AUTHORS, TODO, README, README.md: Replaced the messy
+	    GNU-styled documents with a single Markdown README.md.
 
 2008-05-03
 	 1. Makefile.PL and Build.PL: Automatic checks and lists only
