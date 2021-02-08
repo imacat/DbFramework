@@ -1,6 +1,6 @@
 DbFramework change log
 
-2021-02-08
+2021-02-08	version 1.13
 	 1. The DbFramework is hosted on GitHub now.
 	 2. MANIFEST.SKIP: Added.
 	 3. Makefile, MANIFEST, META.yml, SIGNATURE, t/Config.pm: Removed

@@ -286,7 +286,7 @@ CREATE TABLE c_table (
 
 WriteMakefile(
     NAME		=> "DbFramework",
-    VERSION		=> "1.12",
+    VERSION		=> "1.13",
     ABSTRACT		=> "Classes for Manipulating DBI Databases, Based on the CDIF Data Model Subject Area",
     AUTHOR		=> "imacat <imacat\@mail.imacat.idv.tw>",
 	LICENSE 	=> "perl",

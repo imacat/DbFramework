@@ -284,7 +284,7 @@ CREATE TABLE c_table (
 
 my $build = Module::Build->new(
     dist_name       => "DbFramework",
-    dist_version    => "1.12",
+    dist_version    => "1.13",
     dist_abstract   => "Classes for Manipulating DBI Databases, Based on the CDIF Data Model Subject Area",
     dist_author     => "imacat <imacat\@mail.imacat.idv.tw>",
     license         => "perl",
