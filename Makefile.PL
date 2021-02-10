@@ -7,6 +7,8 @@ use lib qw(lib);
 use DbFramework::Util;
 require './t/util.pl';
 
+exit 0 if $ENV{AUTOMATED_TESTING};
+
 my $catalog_db = 'dbframework_catalog';
 my %keytypes   = (primary => 0, foreign => 1, index => 2);
 
