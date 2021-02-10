@@ -1,11 +1,12 @@
 #! /usr/bin/perl -w
+use strict;
 use Module::Build;
 use lib qw(lib);
 use DbFramework::Util;
 require 't/util.pl';
 
-$catalog_db = 'dbframework_catalog';
-%keytypes   = (primary => 0, foreign => 1, index => 2);
+my $catalog_db = 'dbframework_catalog';
+my %keytypes   = (primary => 0, foreign => 1, index => 2);
 
 Module::Build->prompt(<<EOF, "");
 
@@ -25,7 +26,7 @@ unless ( -f $config && Module::Build->prompt("$config exists, use it?", "Y") =~ 
   my @drivers = grep eval "require DBD::$_; 1;", qw/mysql mSQL Pg/;
   my $drivers = Module::Build->prompt("Enter (space seperated) DBI drivers to test:", join(" ", @drivers));
   @drivers = split /\s/,$drivers;
-  $test_db = 'test';
+  my $test_db = 'test';
 
   my %driver;
   for my $driver ( @drivers ) {
@@ -53,10 +54,10 @@ to $db i.e. 'DBI:$driver:[dsn_string]':}, $db);
 	  # create catalog schema
 	  my %sql = %{catalog_schema()};
 	  # default to mysql DDL syntax
-	  $ddl = (exists $sql{$driver}) ? $driver : 'mysql';
-	  $dsn = $driver{$driver}->{$db}->{dsn};
-	  $u   = $driver{$driver}->{$db}->{u};
-	  $p   = $driver{$driver}->{$db}->{p};
+	  my $ddl = (exists $sql{$driver}) ? $driver : 'mysql';
+	  $dsn    = $driver{$driver}->{$db}->{dsn};
+	  my $u   = $driver{$driver}->{$db}->{u};
+	  my $p   = $driver{$driver}->{$db}->{p};
 	  my $dbh = DbFramework::Util::get_dbh($dsn,$u,$p);
 	  $dbh->{PrintError} = 0;
 	  for my $table ( qw/c_db c_key c_relationship c_table/ ) {
