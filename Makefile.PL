@@ -5,7 +5,7 @@ use strict;
 use ExtUtils::MakeMaker;
 use lib qw(lib);
 use DbFramework::Util;
-require 't/util.pl';
+require './t/util.pl';
 
 my $catalog_db = 'dbframework_catalog';
 my %keytypes   = (primary => 0, foreign => 1, index => 2);
