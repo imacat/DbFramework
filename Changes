@@ -1,5 +1,9 @@
 DbFramework change log
 
+2021-02-10
+	 1. Build.PL, Makefile.PL: Added variable declaration, fixed the
+	    required file path, and prevented the automated tests.
+
 2021-02-08	version 1.13
 	 1. The DbFramework is hosted on GitHub now.
 	 2. MANIFEST.SKIP: Added.
