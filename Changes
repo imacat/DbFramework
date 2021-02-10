@@ -1,5 +1,7 @@
 DbFramework change log
 
+2021-02-11	version 1.14
+
 2021-02-10
 	 1. Build.PL, Makefile.PL: Added variable declaration, fixed the
 	    required file path, and prevented the automated tests.
